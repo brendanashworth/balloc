@@ -35,7 +35,7 @@ test: lib
 	bash test/test.sh
 
 test/%.c.o: test/%.c
-	$(CC) $(LIB_OUT) -Isrc $(FLAGS) $< -o $@
+	$(CC) -Isrc $(FLAGS) $< -o $@ $(LIB_OUT)
 
 # clean
 clean:
