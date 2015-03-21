@@ -1,5 +1,7 @@
 # balloc
 
+[![Build Status](https://travis-ci.org/brendanashworth/balloc.svg?branch=master)](https://travis-ci.org/brendanashworth/balloc)
+
 > Mostly comprehensive C memory allocation library. Has equivalents for `free(3)`, `malloc(3)`, and `realloc(3)`.
 
 ### Features
