@@ -2,6 +2,7 @@
 #
 # lib: build library (builds to LIB_OUT, or out/libballoc.a)
 # test: run tests
+# clean: spring cleaning
 
 CC ?= gcc
 FLAGS ?= -O2 -Wall -DBALLOC_SAFE
@@ -33,4 +34,8 @@ test: lib
 test/%.c.o: test/%.c
 	$(CC) $(LIB_OUT) -Isrc $(FLAGS) $< -o $@
 
-.PHONY: test out lib
+# clean
+clean:
+	rm -rf out
+
+.PHONY: test out lib clean
