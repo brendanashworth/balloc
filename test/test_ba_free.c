@@ -10,5 +10,8 @@ int main() {
     // memory should now be NULL
     assert(memory == NULL);
 
+    // ba_free called on an already free'd pointer should not error
+    assert(ba_free(memory) == NULL);
+
     return 0;
 }
