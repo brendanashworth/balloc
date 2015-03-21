@@ -4,7 +4,7 @@
 # test: run tests
 
 CC ?= gcc
-FLAGS ?= -O2 -Wall
+FLAGS ?= -O2 -Wall -DBALLOC_SAFE
 
 LIB_OUT ?= out/libballoc.a
 OBJ = out/obj/balloc.o
