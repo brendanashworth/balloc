@@ -67,10 +67,3 @@ void* ba_resize(void* ptr, size_t size) {
 
     return (void*) ptr + BALLOC_PREFIX;
 }
-
-size_t ba_size(void* ptr) {
-    if (ptr == NULL) return 0;
-
-    // pointer arithmetic on void* is disallowed, use char* instead
-    return (size_t) *((char*) ptr - BALLOC_PREFIX);
-}
