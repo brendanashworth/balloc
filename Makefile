@@ -8,7 +8,7 @@ CC ?= gcc
 FLAGS ?= -O2 -Wall -DBALLOC_SAFE
 
 LIB_OUT ?= out/libballoc.a
-OBJ = out/obj/balloc.o \
+OBJ = out/obj/alloc.o \
       out/obj/size.o \
       out/obj/free.o \
       out/obj/resize.o
