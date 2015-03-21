@@ -3,6 +3,8 @@
 
 #include <string.h>
 
+#define BALLOC_PREFIX sizeof(size_t)
+
 /**
  * Dynamically allocates a section of memory for access.
  * @param size The size of memory to allocate.

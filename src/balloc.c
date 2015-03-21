@@ -6,8 +6,6 @@
  #include <string.h> // memset()
 #endif
 
-#define BALLOC_PREFIX sizeof(size_t)
-
 #include "balloc.h"
 
 void* ba_alloc(size_t size) {
