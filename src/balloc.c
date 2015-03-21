@@ -3,7 +3,7 @@
 #include <assert.h> // assert()
 
 #ifdef BALLOC_SAFE
- #include <string.h>
+ #include <string.h> // memset()
 #endif
 
 #define BALLOC_PREFIX sizeof(size_t)
