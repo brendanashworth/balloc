@@ -18,12 +18,12 @@ void* ba_alloc(size_t size);
 void* ba_free(void* ptr);
 
 /**
- * Resize an allocated section of memory to the new size. May not be at same
- * pointer location as before. Will return newly allocated memory if NULL is
- * passed as ptr.
+ * Resize an allocated section of memory to the new size.
  * @param ptr  The pointer of the previously allocated memory.
  * @param size The size of the new allocation (NOT a DIFFERENCE from the
  *             original pointer, i.e. 8 + 4).
+ * @return     Newly allocated memory pointer. Might not be at same pointer
+ *             as before.
  */
 void* ba_resize(void* ptr, size_t size);
 
