@@ -1,5 +1,5 @@
 #include <stddef.h> // size_t
-#include <stdlib.h> // malloc(), free()
+#include <stdlib.h> // malloc(), free(), realloc()
 #include <assert.h> // assert()
 
 #ifdef BALLOC_SAFE
