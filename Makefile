@@ -10,7 +10,8 @@ FLAGS ?= -O2 -Wall -DBALLOC_SAFE
 LIB_OUT ?= out/libballoc.a
 OBJ = out/obj/balloc.o \
       out/obj/size.o \
-      out/obj/free.o
+      out/obj/free.o \
+      out/obj/resize.o
 
 # test (requires built library) is default
 default: test
