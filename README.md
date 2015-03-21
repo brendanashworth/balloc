@@ -12,7 +12,7 @@
 * Errors on a failed allocation, rather than a hard to trace `NULL` pointer reference.
 
 ### Documentation
-Read through [`balloc.h`](./src/balloc.h) for the documentation and forward declarations. When in doubt, [read the source code](./src/balloc.c). For examples, take a look at the [tests](./test/).
+Read through [`balloc.h`](./src/balloc.h) for the documentation and forward declarations. When in doubt, [read the source code](./src/). For examples, take a look at the [tests](./test/).
 
 ### Building
 Building balloc requires:
