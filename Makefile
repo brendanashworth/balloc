@@ -3,8 +3,6 @@
 # lib: build library (builds to LIB_OUT, or out/libballoc.a)
 # test: run tests
 
-LIBS = -Isrc
-SRCS = src/balloc.c
 CC ?= gcc
 FLAGS ?= -O2 -Wall
 
@@ -33,6 +31,6 @@ test: lib
 	bash test/test.sh
 
 test/%.c.o: test/%.c
-	$(CC) $(LIB_OUT) $(LIBS) $(FLAGS) $< -o $@
+	$(CC) $(LIB_OUT) -Isrc $(FLAGS) $< -o $@
 
 .PHONY: test out lib
