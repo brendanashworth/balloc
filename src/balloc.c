@@ -1,5 +1,5 @@
 #include <stddef.h> // size_t
-#include <stdlib.h> // malloc(), free(), realloc()
+#include <stdlib.h> // malloc(), realloc()
 #include <assert.h> // assert()
 
 #ifdef BALLOC_SAFE
@@ -22,22 +22,6 @@ void* ba_alloc(size_t size) {
     *((size_t*)ptr) = size;
 
     return (void*) ptr + BALLOC_PREFIX;
-}
-
-void* ba_free(void* ptr) {
-    if (ptr == NULL) return ptr;
-
-    // re-adjust pointer back to where we allocated it
-    ptr = (void*) ptr - BALLOC_PREFIX;
-
-#ifdef BALLOC_SAFE
-    memset(ptr, '\0', (size_t) *((char*) ptr) );
-#endif
-
-    free(ptr);
-
-    // return NULL, which will replace old ptr value
-    return NULL;
 }
 
 void* ba_resize(void* ptr, size_t size) {
