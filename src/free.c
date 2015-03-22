@@ -14,7 +14,7 @@ void* ba_free(void* ptr) {
     ptr = (void*) ptr - BALLOC_PREFIX;
 
 #ifdef BALLOC_SAFE
-    memset(ptr, '\0', (size_t) *((char*) ptr) );
+    memset(ptr, '\0', (size_t) *((char*) ptr) + BALLOC_PREFIX);
 #endif
 
     free(ptr);

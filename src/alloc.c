@@ -15,7 +15,7 @@ void* ba_alloc(size_t size) {
     assert(ptr != NULL);
 
 #ifdef BALLOC_SAFE
-    memset(ptr, '\0', size);
+    memset(ptr, '\0', size + BALLOC_PREFIX);
 #endif
 
     // write size before pointer
